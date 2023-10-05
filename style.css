@@ -1,0 +1,260 @@
+@font-face {
+    font-family: "hexgon";
+    src: url(Font/hexgon.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html::-webkit-scrollbar{
+    width: 0.5vw;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #3335;
+}
+html::-webkit-scrollbar-track{
+    background-color: #4445;
+}
+body{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 100vh;
+    background: #434750;
+}
+.menu{
+    display: flex;
+    position: relative;
+    top: 60px;
+    left: 40px;
+    width: 95%;
+    padding-bottom: 100px;
+    justify-content: space-between;
+}
+
+ul{
+    position: relative;
+    transform: skewY(-15deg);
+    transition: all 0.5s;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    width: 200px;
+    background: #333;
+    padding: 15px;
+    z-index: var(--i);
+    transition: all 0.5s;
+
+}
+ul li:hover{
+    background: #33a3ee;
+    transform: translateX(30px); /* Option skey left or right */
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #2e3133;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: all 0.5s;
+}
+ul li:hover::before{
+    background: #1f5378;
+}
+ul li::after{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #35383e;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: all 0.5s;
+}
+ul li:hover::after{
+    background: #2982b9;
+
+}
+ul li a{
+    font-size: larger;
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    transition: all 0.5s;
+}
+
+ul li:hover a{
+    color: #fff;
+}
+ul li:last-child::after{
+    box-shadow: -120px 120px 20px #3338;
+}
+
+/* Logo */
+.logo{
+    height: max-content;
+}
+.logo a{
+    font-family: "hexgon";
+    font-size: 100px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #0007;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.logo:hover a{
+    text-shadow: 0px 0px 10px #fff;
+}
+
+/* Card */
+
+.container{
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.container .card{
+    position: relative;
+    width: 280px;
+    height: 100px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px #0000007b;
+    background: #ffffff1f;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-top: 1px solid #ffffff77; */
+    /* border-left: 1px solid #ffffff77; */
+    backdrop-filter: blur(5px);
+    transition: all 0.3s;
+}
+.container .one{
+    background-image: url(Images/card-1.jpeg);
+    background-size: cover;
+    
+}
+.container .two{
+    background-image: url(Images/card-2.jpg);
+    background-size: cover;
+}
+.container .three{
+    background-image: url(Images/card-3.jpg);
+    background-size: cover;
+}
+.container .four{
+    background-image: url(Images/card-4.jpg);
+    background-size: cover;
+}
+.container .card .content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.container .card .content h3{
+    opacity: 1;
+}
+.container .card:hover{
+    height: 400px;
+}
+.container .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.container .card .content h2{
+    position: absolute;
+    top: -80px;
+    right: 03px;
+    font-size: 8em;
+    color: #ffffff6c;
+    pointer-events: none;
+    /* text-shadow: 2px 2px 4px #0004; */
+    z-index: -1;
+}
+.container .card .content h3{
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+    text-shadow: 2px 2px 4px #0004;
+}
+.container .card .content p{
+    font-size: 1em;
+    color: #fff;
+    text-shadow: 2px 2px 4px #0004;
+
+}
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px #0004;
+}
+
+
+/* Container-two */
+.container-two{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-two .card{
+    position: relative;
+    margin: 20px;
+    width: 350px;
+    height: 190px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px #0002;
+    transition: all 0.3s;
+}
+.container-two .card:hover{
+    height: 450px;
+
+}
+.container-two .imgBx{
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: url(Images/rafi.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px #0008;
+    transition: all 0.3s;
+}
+
+.container-two .card:hover .imgBx{
+    width: 250px;
+    height: 250px;
+}
