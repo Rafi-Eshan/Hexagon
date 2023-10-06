@@ -2,6 +2,10 @@
     font-family: "hexgon";
     src: url(Font/hexgon.ttf);
 }
+@font-face {
+    font-family: "social";
+    src: url(Font/Social\ Color\ Pro.ttf);
+}
 
 *{
     margin: 0;
@@ -35,12 +39,12 @@ body{
     justify-content: space-between;
 }
 
-ul{
+.menu ul{
     position: relative;
     transform: skewY(-15deg);
     transition: all 0.5s;
 }
-ul li{
+.menu ul li{
     position: relative;
     list-style: none;
     width: 200px;
@@ -50,11 +54,11 @@ ul li{
     transition: all 0.5s;
 
 }
-ul li:hover{
+.menu ul li:hover{
     background: #33a3ee;
     transform: translateX(30px); /* Option skey left or right */
 }
-ul li::before{
+.menu ul li::before{
     content: '';
     position: absolute;
     top: 0;
@@ -66,10 +70,10 @@ ul li::before{
     transform: skewY(45deg);
     transition: all 0.5s;
 }
-ul li:hover::before{
+.menu ul li:hover::before{
     background: #1f5378;
 }
-ul li::after{
+.menu ul li::after{
     content: '';
     position: absolute;
     top: -40px;
@@ -81,11 +85,11 @@ ul li::after{
     transform: skewX(45deg);
     transition: all 0.5s;
 }
-ul li:hover::after{
+.menu ul li:hover::after{
     background: #2982b9;
 
 }
-ul li a{
+.menu ul li a{
     font-size: larger;
     text-decoration: none;
     color: #999;
@@ -95,10 +99,10 @@ ul li a{
     transition: all 0.5s;
 }
 
-ul li:hover a{
+.menu ul li:hover a{
     color: #fff;
 }
-ul li:last-child::after{
+.menu ul li:last-child::after{
     box-shadow: -120px 120px 20px #3338;
 }
 
@@ -247,14 +251,117 @@ ul li:last-child::after{
     transform: translateX(-50%);
     width: 150px;
     height: 150px;
-    background: url(Images/rafi.jpg);
-    background-size: cover;
+    /* background: url(Images/rafi.jpg);
+    background-size: cover; */
     border-radius: 20px;
     box-shadow: 0 15px 30px #0008;
     transition: all 0.3s;
+}
+.container-two .one{
+    background: url(Images/babu.jpg);
+    background-size: cover;
+}
+.container-two .two{
+    background: url(Images/rafi.jpg);
+    background-size: cover;
+}
+.container-two .three{
+    background: url(Images/mahedi.jpg);
+    background-size: cover;
 }
 
 .container-two .card:hover .imgBx{
     width: 250px;
     height: 250px;
+}
+.container-two .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+.container-two .content .details{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: all 0.5s;
+}
+.container-two .content .details h3{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 0.5;
+}
+.container-two .content .details span{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+/* footer */
+footer{
+    height: 220px;
+    background-color: #2e3133;
+    /* position: absolute; */
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+}
+footer .container{
+    margin: auto;
+    padding: 30px;
+    height: auto;
+    max-width: 1400px;
+}
+footer ul{
+    list-style: none;
+}
+footer .row{
+    display: flex;
+    width: 800px;
+    /* flex-wrap: wrap; */
+}
+footer .col{
+    width: 30%;
+    padding: 0 15px;
+}
+footer .col h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+footer .col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #25baff;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+footer .col ul li{
+    margin-bottom: 10px;
+}
+footer .col ul li a{
+    font-size: 16px;
+    color: #bbb;
+    text-decoration: none;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+footer .col ul li a:hover{
+    color: #fff;
+    padding-left: 5px;
+}
+footer .social-links a{
+    font-family: "social";
+    font-size: 50px;
+    text-decoration: none;
+
 }
